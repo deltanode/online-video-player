@@ -7,7 +7,7 @@ import '@viewlift/player/esm/bundle.css'
 
 export default function VideoPlayer() {
   const VlCore = VLPlayerCore()
-  let playerVersion
+  let playerVersion = "2.0.14"
   // if (typeof window !== "undefined") {
   //   playerVersion = window?.vl_player_version
   // }
@@ -118,7 +118,7 @@ export default function VideoPlayer() {
      <div className="min-h-screen bg-gray-100 text-gray-800">
       {/* Header */}
       <div className="bg-white shadow px-6 py-4 text-2xl font-bold text-center border-b">
-        WEB PLAYER { playerVersion && `[v${playerVersion}]`}
+        VL WEB PLAYER { playerVersion && `[v${playerVersion}]`}
       </div>
 
       {/* Main Container */}
