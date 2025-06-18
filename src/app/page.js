@@ -1,5 +1,7 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+export const dynamic = 'force-dynamic';
+
+import React, { useState } from 'react';
 import VLPlayerCore from '@viewlift/player/esm/index';
 // import VLPlayerCore from 'dev-player/index';
 import '@viewlift/player/esm/bundle.css'
