@@ -7,10 +7,10 @@ import '@viewlift/player/esm/bundle.css'
 
 export default function VideoPlayer() {
   const VlCore = VLPlayerCore()
-  let playerVersion = "2.0.14"
-  // if (typeof window !== "undefined") {
-  //   playerVersion = window?.vl_player_version
-  // }
+  let playerVersion
+  if (typeof window !== "undefined") {
+    playerVersion = window?.vl_player_version
+  }
   const [mode, setMode] = useState('direct'); // 'config' or 'direct'
   const [error, setError] = useState('');
   const [disableControls, setDisableControls] = useState(false);
