@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from 'react';
-import VLPlayerCore from '@viewlift/player/esm/index';
+import VLPlayerCore from '@viewlift/player-backup/esm/index';
 // import VLPlayerCore from 'dev-player/index';
-import '@viewlift/player/esm/bundle.css'
+import '@viewlift/player-backup/esm/bundle.css'
 
 export default function VideoPlayer() {
   const VlCore = VLPlayerCore()
-  let playerVersion = "2.0.19"
+  let playerVersion = '2.0.10-backup'
   // if (typeof window !== "undefined") {
   //   playerVersion = window?.vl_player_version
   // }
