@@ -2,14 +2,14 @@
 
 import React, { useState } from 'react';
 import VLPlayerCore from '@viewlift/player-backup/esm/index';
-// import VLPlayerCore from 'dev-player/index';
 import '@viewlift/player-backup/esm/bundle.css'
+import Header from './Header';
 
 export default function VideoPlayer() {
   const VlCore = VLPlayerCore()
-  let playerVersion = '2.0.10-backup'
+  let playerVersion = 'v2.0.10-beta'
   // if (typeof window !== "undefined") {
-  //   playerVersion = window?.vl_player_version
+  //   playerVersion = "v" + window?.vl_player_version
   // }
   const [mode, setMode] = useState('direct'); // 'config' or 'direct'
   const [error, setError] = useState('');
@@ -116,10 +116,7 @@ export default function VideoPlayer() {
 
   return (
      <div className="min-h-screen bg-gray-100 text-gray-800">
-      {/* Header */}
-      <div className="bg-white shadow px-6 py-4 text-2xl font-bold text-center border-b">
-        VL WEB PLAYER { playerVersion && `[v${playerVersion}]`}
-      </div>
+      <Header playerVersion={playerVersion}/>
 
       {/* Main Container */}
       <div className="flex flex-col md:flex-row gap-6 p-6">
